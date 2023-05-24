@@ -11,7 +11,7 @@
   </a>
 </p>
 
-Deploy this function on flows.network, and you will get a Telegram bot that uses ChatGPT to respond to every question in your Telegram DM or channel/group automatically.
+Deploy this function on flows.network, and you will get a Telegram bot that uses ChatGPT to translate and polish text written in any language (including English!) into standard business English.
 
 <img width="1151" alt="image" src="https://user-images.githubusercontent.com/45785633/226554378-0ea64870-186d-4449-9ae8-d84a2bedf8f6.png">
 
@@ -32,34 +32,25 @@ To install the ChatGPT Telegram App, we will use [flows.network](https://flows.n
 
 Fork [this repo](https://github.com/flows-network/telegram-gpt) and go to flows.network to deploy your function.
 
-### Deploy the code on flow.network
+### Deploy the code on flows.network
 
 1. Log into [flows.network](https://flows.network/) from your GitHub account. It's free.
 
 2. Click on the "Create a Flow" button to start deploying the ChatGPT GitHub APP
 
-3. Authenticate the flows.network to access the `telegram-gpt` repo you just forked.
+3. Authenticate the flows.network to access the `telegram-gpt` repo you just forked. Choose the `translate-improve-english` branch.
+
 ![image](https://user-images.githubusercontent.com/45785633/226558160-7a319520-2212-41e4-b40e-43ca5f8d5712.png)
 
-4. Click the Advanced test to see more settings. Here we need to use Environment Variables to pass the Telegram token and OpenAI API key name. 
-* `telegram_token`: Fill in the token you received from Fatherbot.
-* `openai_key_name`: Fill in the name you want for your OpenAI key. You can put any name here, and we will connect it to the actual key later.
+4. Click the Advanced test to see more settings. Here we need to use Environment Variables to pass the Telegram token. 
+
+* `telegram_token`: Fill in the token you received from botfather.
 
 ![image](https://user-images.githubusercontent.com/45785633/226562489-ff140061-d1e4-44ab-8cc9-369983cb016d.png)
 
 5. Click on the Deploy button to deploy your function.
 
-## Configure SaaS integrations
-
-After that, the [flows.network](https://flows.network/) will direct you to configure the SaaS integration required by your flow. Since we have configured Telegram in the above step, OpenAI is the only SaaS we need to configure here. 
-
-![image](https://user-images.githubusercontent.com/45785633/226564674-902933b5-8ff3-4724-93e3-2b2f67dc0b9a.png)
-
-Click the "Connect/+ Add new authentication" button to add your OpenAI API key. On the next page, copy and paste your OpenAI API key and then name the key. **Note** the name you enter here should be the same as the name in the environment variable.
-
-<img width="758" alt="image" src="https://user-images.githubusercontent.com/45785633/222973214-ecd052dc-72c2-4711-90ec-db1ec9d5f24e.png">
-
-## Give it a try. 
+## Give it a try.
 
 Click on the Check button to see your flow details. As soon as the flow function's status becomes `ready` and the flow's status becomes `running`, the Telegram ChatGPT App goes live. Go ahead and send a private message to the bot! You can also invite this bot to your channel/group.
 
